@@ -19,7 +19,7 @@ nav{
     background:rgba(17,17,17,0.95);
     backdrop-filter:blur(10px);
     color:white;
-    padding:12px 8%;
+     padding:12px 20px;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -36,10 +36,8 @@ nav{
 }
 
 .logo-left-container{
-    display:flex;
+     display:flex;
     align-items:center;
-    margin-right:auto;
-    padding-left:15px;
 }
 
 .nav-logo{
@@ -938,4 +936,23 @@ footer h2{
         width:100%;
         padding:15px;
     }
+}
+html,
+body{
+    overflow-x:hidden;
+}
+@media(max-width:600px){
+
+    nav{
+        padding:10px 15px;
+    }
+
+    .logo{
+        font-size:24px;
+    }
+
+    .nav-logo{
+        max-height:35px;
+    }
+
 }
