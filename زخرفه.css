@@ -96,11 +96,14 @@ nav ul{
     transition:0.3s;
 }
 
-.hero-text button:hover{
-    transform:translateY(-3px);
-    background:linear-gradient(135deg,#d4a24c,#b8862d);
-}
+@media (hover:hover){
 
+    .hero-text button:hover{
+        transform:translateY(-3px);
+        background:linear-gradient(135deg,#d4a24c,#b8862d);
+    }
+
+}
 .hero img{
     width:45%;
     border-radius:20px;
