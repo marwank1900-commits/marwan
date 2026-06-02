@@ -562,12 +562,16 @@ footer h2{
     }
 }
 .anime-showcase{
+    position:relative;
+    overflow:hidden;
+
     margin:50px 8%;
     padding:60px;
     background:white;
     border-radius:30px;
     box-shadow:0 15px 40px rgba(0,0,0,.06);
 }
+
 .anime-title h2::after{
     content:"";
     display:block;
@@ -589,6 +593,7 @@ footer h2{
     top:-100px;
     left:50%;
     transform:translateX(-50%);
+     pointer-events:none;
 }
 
 .anime-title h2{
@@ -598,17 +603,19 @@ footer h2{
 }
 
 .anime-slider{
+    position:relative;
+    width:100%;
+    height:450px;
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:25px;
-    position:relative;
+    overflow:hidden;
 }
 
 .anime-slide{
-    transition:.6s;
-    transform:scale(.8);
-    opacity:.5;
+    position:absolute;
+    transition:all .8s ease;
+    opacity:.4;
 }
 
 .anime-slide img{
@@ -616,16 +623,39 @@ footer h2{
     height:380px;
     object-fit:cover;
     border-radius:25px;
-    box-shadow:0 15px 40px rgba(0,0,0,.15);
 }
 
-.anime-slide.active{
-    transform:scale(1.15);
+
+/* الوسط */
+.anime-slide.center{
+    transform:translateX(0) scale(1.15);
     opacity:1;
+    z-index:3;
 }
 
-.anime-slide:hover{
-    transform:scale(1.2);
+/* اليمين */
+.anime-slide.right{
+    transform:translateX(220px) scale(.85);
+    opacity:.6;
+    z-index:2;
+}
+
+/* اليسار */
+.anime-slide.left{
+    transform:translateX(-220px) scale(.85);
+    opacity:.6;
+    z-index:2;
+}
+.delivery-note{
+    background:#fff8e8;
+    border:1px solid #f0d9a6;
+    color:#8b6a21;
+    padding:14px;
+    border-radius:12px;
+    margin-bottom:15px;
+    text-align:center;
+    font-weight:700;
+    line-height:1.8;
 }
 /* ================= PORTFOLIO ================= */
 
