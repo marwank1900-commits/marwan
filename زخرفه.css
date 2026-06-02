@@ -810,3 +810,132 @@ footer h2{
 .instagram-btn:hover{
     transform:translateY(-3px);
 }
+/* ================= MOBILE FIX ================= */
+
+@media (max-width: 768px){
+
+    nav{
+        padding:12px 15px;
+    }
+
+    .logo{
+        font-size:28px;
+    }
+
+    .nav-logo{
+        max-height:40px;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding:40px 20px;
+    }
+
+    .hero-text{
+        width:100%;
+    }
+
+    .hero-text h1{
+        font-size:36px;
+    }
+
+    .hero-text p{
+        font-size:18px;
+    }
+
+    .hero img{
+        width:100%;
+    }
+
+    .steps{
+        margin:30px 15px;
+        padding:25px;
+    }
+
+    .step{
+        width:100%;
+    }
+
+    .form-section{
+        padding:20px 15px;
+    }
+
+    .card{
+        min-width:100%;
+    }
+
+    .portfolio{
+        margin:30px 15px;
+        padding:35px 20px;
+    }
+
+    .portfolio-title h2{
+        font-size:34px;
+    }
+
+    .portfolio-title p{
+        font-size:16px;
+    }
+
+    .portfolio-grid{
+        grid-template-columns:1fr;
+    }
+
+    .portfolio-card{
+        height:320px;
+    }
+
+    .stats{
+        flex-direction:column;
+        gap:20px;
+        text-align:center;
+    }
+
+    .stats h3{
+        font-size:32px;
+    }
+
+    .anime-showcase{
+        margin:30px 15px;
+        padding:30px 15px;
+    }
+
+    .anime-title h2{
+        font-size:32px;
+    }
+
+    .anime-slider{
+        gap:10px;
+    }
+
+    .anime-slide img{
+        width:100px;
+        height:150px;
+    }
+
+    .products{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+    }
+
+    .product-card{
+        width:100%;
+    }
+
+    .colors-grid{
+        justify-content:center;
+        padding-top:45px;
+    }
+
+    .whatsapp{
+        margin:30px 15px;
+        padding:30px 20px;
+    }
+
+    .whatsapp button{
+        width:100%;
+        padding:15px;
+    }
+}
