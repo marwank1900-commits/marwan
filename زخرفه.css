@@ -984,3 +984,27 @@ body{
     }
 
 }
+@media (max-width:768px){
+
+    .anime-slider{
+        height:260px;
+    }
+
+    .anime-slide img{
+        width:140px;
+        height:220px;
+    }
+
+    .anime-slide.center{
+        transform:translateX(0) scale(1.05);
+    }
+
+    .anime-slide.right{
+        transform:translateX(90px) scale(.8);
+    }
+
+    .anime-slide.left{
+        transform:translateX(-90px) scale(.8);
+    }
+
+}
