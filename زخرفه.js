@@ -319,7 +319,9 @@ function showAnimeHoodieColors() {
     const colors = [
         "أبيض",
         "أسود",
-        "فضي"
+        "فضي",
+        "رمادي",
+        "بيج"
     ];
 
     renderSpecificColors(colors);
@@ -425,19 +427,32 @@ function continueWhatsApp(){
 }
 const slides = document.querySelectorAll(".anime-slide");
 
-let currentSlide = 0;
+let current = 0;
+
+function updateSlider() {
+
+    slides.forEach(slide => {
+        slide.classList.remove("left","center","right");
+    });
+
+    slides[current].classList.add("center");
+
+    slides[(current + 1) % slides.length].classList.add("right");
+
+    slides[(current - 1 + slides.length) % slides.length].classList.add("left");
+}
+
+updateSlider();
 
 setInterval(() => {
 
-    slides[currentSlide].classList.remove("active");
+    current++;
 
-    currentSlide++;
-
-    if(currentSlide >= slides.length){
-        currentSlide = 0;
+    if(current >= slides.length){
+        current = 0;
     }
 
-    slides[currentSlide].classList.add("active");
+    updateSlider();
 
 }, 3000);
 const portfolioCards =
